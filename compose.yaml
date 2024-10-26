@@ -7,11 +7,3 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./dist:/usr/share/nginx/html
-    depends_on:
-      - builder
-
-  builder:
-    build: .
-    volumes:
-      - ./dist:/app/dist
-    
